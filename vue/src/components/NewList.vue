@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h2 v-for="animal in animals" :key="animal">{{ animal }}</h2>
+    <!--<h2 v-for="animal in animals" :key="animal">{{ animal }}</h2>-->
     <!-- its like a for each -->
+    <AnimalCard v-for="animal in animals" :key="animal.name" />
   </div>
 </template>
 
 <script setup>
-const animals = ['zebra', 'panda', 'cat', 'whale']
+/* import AnimalCard from '../components/AnimalCard.vue' */
+//const animals = {'walrus', "cat"}
 console.log('jfhakdfksdjh')
 </script>
 
