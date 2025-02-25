@@ -19,17 +19,11 @@ function increment() {
 
 <template>
   <!--tmr make this into a component to pass the props into-->
-  <div>
-    <div v-for="(mon, index) in pokemon" :key="mon.name">
-      <h2>
-        {{ mon.name }}
-        <h3>{{ index + 1 }}</h3>
-      </h2>
-    </div>
-  </div>
+  <PokeDisplay v-for="(mon, index) in pokemon" :mon="mon" :index="index + 1"></PokeDisplay>
 </template>
 
 <script setup>
+import PokeDisplay from '@/components/PokeDisplay.vue'
 import { ref, onMounted } from 'vue'
 const pokemon = ref('')
 

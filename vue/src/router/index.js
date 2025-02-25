@@ -22,6 +22,11 @@ const router = createRouter({
       name: `form`,
       component: () => import(`../views/ImportView.vue`),
     },
+    {
+      path: `/pokemon/:id`, //: makes it a variable
+      name: `pokemonData`,
+      component: () => import(`../views/PokemonData.vue`),
+    },
   ],
 })
 
